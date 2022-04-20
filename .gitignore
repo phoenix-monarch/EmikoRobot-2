@@ -1,17 +1,17 @@
 # Config files, logs and stuff
-NaoRobot/modules/helper_funcs/temp.txt
-NaoRobot/elevated_users.json
-NaoRobot/config.py
-NaoRobot/config.ini
+EmikoRobot/modules/helper_funcs/temp.txt
+EmikoRobot/elevated_users.json
+EmikoRobot/config.py
+EmikoRobot/config.ini
 log.txt
 kangsticker.png
 updates.txt
 start_service.bat
 
 # Session files
-NaoRobot/*.session
-NaoRobot/*.session-journal
-Nao.session-journal
+EmikoRobot/*.session
+EmikoRobot/*.session-journal
+Emiko.session-journal
 *.session
 
 # Byte-compiled / optimized / DLL files
