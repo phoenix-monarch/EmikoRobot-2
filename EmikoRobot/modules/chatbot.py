@@ -44,7 +44,7 @@ ewe_chats = []
 en_chats = []
 
 
-@pbot.on_message(filters.command(["chatbot", f"chatbot@{bu}"]) & ~filters.edited & ~filters.bot & ~filters.private)
+@pbot.on_message(filters.command(["chatbot", f"chatbot@{bu}"]) & ~filters.bot & ~filters.private)
 @admins_only
 async def hmm(_, message):
     global ewe_chats
@@ -84,7 +84,6 @@ async def hmm(_, message):
     filters.text
     & filters.reply
     & ~filters.bot
-    & ~filters.edited
     & ~filters.via_bot
     & ~filters.forwarded,
     group=2,
@@ -244,7 +243,7 @@ async def hmm(client, message):
             return
 
 
-@pbot.on_message(filters.text & filters.private & ~filters.edited & filters.reply & ~filters.bot)
+@pbot.on_message(filters.text & filters.private & filters.reply & ~filters.bot)
 async def inuka(client, message):
     msg = message.text
     if msg.startswith("/") or msg.startswith("@"):
@@ -336,7 +335,7 @@ async def inuka(client, message):
         return
 
 
-@pbot.on_message(filters.regex("Emiko|emiko|robot|EMIKO|sena") & ~filters.bot & ~filters.via_bot  & ~filters.forwarded & ~filters.reply & ~filters.channel & ~filters.edited)
+@pbot.on_message(filters.regex("Emiko|emiko|robot|EMIKO|sena") & ~filters.bot & ~filters.via_bot  & ~filters.forwarded & ~filters.reply & ~filters.channel)
 async def inuka(client, message):
     msg = message.text
     if msg.startswith("/") or msg.startswith("@"):
