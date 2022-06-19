@@ -82,6 +82,7 @@ class Config(object):
     LASTFM_API_KEY = "yeah"
     CF_API_KEY = "jk"
     BL_CHATS = []  # List of groups that you want blacklisted.
+    SESSION_STRING = "12342"
 
 
 class Production(Config):
