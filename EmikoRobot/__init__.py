@@ -124,7 +124,8 @@ if ENV:
     BOT_ID = int(os.environ.get("BOT_ID", None))
     ARQ_API_URL = os.environ.get("ARQ_API_URL", "https://arq.hamker.in")
     ARQ_API_KEY = os.environ.get("ARQ_API_KEY", "BCYKVF-KYQWFM-JCMORU-RZWOFQ-ARQ")
-
+    MONGO_PORT = os.environ.get("MONGO_PORT")
+    MONGO_DB = os.environ.get("MONGO_DB", "Emiko")
     ALLOW_CHATS = os.environ.get("ALLOW_CHATS", True)
 
     try:
@@ -173,7 +174,7 @@ else:
     CERT_PATH = Config.CERT_PATH
     API_ID = Config.API_ID
     API_HASH = Config.API_HASH
-
+    MONGO_PORT = Config.MONGO_PORT
     DB_URL = Config.SQLALCHEMY_DATABASE_URI
     MONGO_DB_URI = Config.MONGO_DB_URI
     ARQ_API_KEY = Config.ARQ_API_KEY
@@ -204,6 +205,7 @@ else:
     STRING_SESSION = Config.STRING_SESSION
     LASTFM_API_KEY = Config.LASTFM_API_KEY
     CF_API_KEY = Config.CF_API_KEY
+    MONGO_DB = Config.MONGO_DB
 
     try:
         BL_CHATS = {int(x) for x in Config.BL_CHATS or []}
