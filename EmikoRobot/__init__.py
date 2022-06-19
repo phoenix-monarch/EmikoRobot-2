@@ -43,9 +43,9 @@ LOGGER.info("Not affiliated to other anime or Villain in any way whatsoever.")
 LOGGER.info("Project maintained by: github.com/kennedy-ex (t.me/excrybaby)")
 
 # if version < 3.9, stop bot.
-if sys.version_info[0] < 3 or sys.version_info[1] < 9:
+if sys.version_info[0] < 3 or sys.version_info[1] < 8:
     LOGGER.error(
-        "You MUST have a python version of at least 3.6! Multiple features depend on this. Bot quitting."
+        "You MUST have a python version of at least 3.8! Multiple features depend on this. Bot quitting."
     )
     sys.exit(1)
 
