@@ -1,8 +1,11 @@
 import asyncio
 import sys
+import logging as log
+
 from motor import motor_asyncio
 from pymongo import MongoClient
 from pymongo.errors import ServerSelectionTimeoutError
+
 from EmikoRobot import MONGO_DB_URI
 from EmikoRobot.confing import get_int_key, get_str_key
 
