@@ -83,6 +83,7 @@ class Config(object):
     CF_API_KEY = "jk"
     BL_CHATS = []  # List of groups that you want blacklisted.
     SESSION_STRING = "12342"
+    STRING_SESSION = "kontol"
 
 
 class Production(Config):
