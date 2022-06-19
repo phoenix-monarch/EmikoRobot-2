@@ -84,6 +84,8 @@ class Config(object):
     BL_CHATS = []  # List of groups that you want blacklisted.
     SESSION_STRING = "12342"
     STRING_SESSION = "kontol"
+    MONGO_PORT = 27017
+    MONGO_DB = "Fumika"
 
 
 class Production(Config):
