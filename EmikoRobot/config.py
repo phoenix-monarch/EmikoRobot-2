@@ -85,7 +85,7 @@ class Config(object):
     SESSION_STRING = "12342"
     STRING_SESSION = "kontol"
     MONGO_PORT = 27017
-    MONGO_DB = "Fumika"
+    MONGO_DB = "Emiko"
 
 
 class Production(Config):
