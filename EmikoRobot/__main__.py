@@ -216,6 +216,7 @@ def start(update: Update, context: CallbackContext):
 
         else:
             first_name = update.effective_user.first_name
+            uptime = get_readable_time((time.time() - StartTime))
             update.effective_message.reply_text(
                 PM_START_TEXT.format(
                     escape_markdown(first_name),
@@ -390,20 +391,6 @@ def emiko_about_callback(update, context):
                 ]
             ),
         )
-    elif query.data == "emiko_back":
-        first_name = update.effective_user.first_name
-        uptime = get_readable_time((time.time() - StartTime))
-        query.message.edit_text(
-                PM_START_TEXT.format(
-                    escape_markdown(first_name),
-                    escape_markdown(uptime),
-                    sql.num_users(),
-                    sql.num_chats()),
-                reply_markup=InlineKeyboardMarkup(buttons),
-                parse_mode=ParseMode.MARKDOWN,
-                timeout=60,
-                disable_web_page_preview=False,
-        )
 
     elif query.data == "emiko_admin":
         query.message.edit_text(
@@ -514,6 +501,7 @@ def Source_about_callback(update, context):
         )
     elif query.data == "source_back":
         first_name = update.effective_user.first_name
+        uptime = get_readable_time((time.time() - StartTime))
         query.message.edit_text(
                 PM_START_TEXT.format(
                     escape_markdown(first_name),
@@ -583,6 +571,25 @@ def get_help(update: Update, context: CallbackContext):
 
     else:
         send_help(chat.id, HELP_STRINGS)
+
+
+def start_back(update: Update, _: CallbackContext):
+    query = update.callback_query
+    uptime = get_readable_time((time.time() - StartTime))
+    if query.data == "emiko_back":
+        first_name = update.effective_user.first_name
+        query.message.edit_text(
+            PM_START_TEXT.format(
+                escape_markdown(first_name),
+                escape_markdown(uptime),
+                sql.num_users(),
+                sql.num_chats(),
+            ),
+            reply_markup=InlineKeyboardMarkup(buttons),
+            parse_mode=ParseMode.MARKDOWN,
+            timeout=60,
+            disable_web_page_preview=True,
+        )
 
 
 def send_settings(chat_id, user_id, user=False):
@@ -815,6 +822,9 @@ def main():
     help_callback_handler = CallbackQueryHandler(
         help_button, pattern=r"help_.*", run_async=True
     )
+    start_callback_handler = CallbackQueryHandler(
+        start_back, pattern=r"emiko_back", run_async=True
+    )
 
     settings_handler = CommandHandler("settings", get_settings, run_async=True)
     settings_callback_handler = CallbackQueryHandler(
@@ -838,6 +848,7 @@ def main():
     dispatcher.add_handler(start_handler)
     dispatcher.add_handler(help_handler)
     dispatcher.add_handler(about_callback_handler)
+    dispatcher.add_handler(start_callback_handler)
     dispatcher.add_handler(source_callback_handler)
     dispatcher.add_handler(settings_handler)
     dispatcher.add_handler(help_callback_handler)
