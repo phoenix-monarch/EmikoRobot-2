@@ -69,8 +69,8 @@ def generate_captcha():
     width = 80 * 4
     height = 100
     correct_answer = ""
-    font = ImageFont.truetype("NaoRobot/resources/default.ttf", 55)
-    file = f"NaoRobot/resources/{randint(1000, 9999)}.jpg"
+    font = ImageFont.truetype("EmikoRobot/resources/default.ttf", 55)
+    file = f"EmikoRobot/resources/{randint(1000, 9999)}.jpg"
     image = Image.new("RGB", (width, height), (255, 255, 255))
     draw = ImageDraw.Draw(image)
 
