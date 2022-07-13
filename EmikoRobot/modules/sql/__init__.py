@@ -7,6 +7,9 @@ from sqlalchemy.orm import sessionmaker, scoped_session
 from EmikoRobot import DB_URL, LOGGER
 
 
+if DB_URL and DB_URL.startswith("postgres://"):
+    DB_URL = DB_URL.replace("postgres://", "postgresql://", 1)
+
 def start() -> scoped_session:
     engine = create_engine(DB_URL, client_encoding="utf8")
     LOGGER.info("PostgreSQL Connecting to database......")
