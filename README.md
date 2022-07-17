@@ -25,28 +25,26 @@
 - You can just change the name of github on deploy link and done, the repos able to deploy on heroku.
 - Full Tutorial - [![Full Tutorial](https://img.shields.io/badge/Watch%20Now-blue)](https://youtu.be/GMaYMYhf_Vk)
 
+<p align="center"><a href="https://dashboard.heroku.com/new?template=https://github.com/kennedy-ex/EmikoRobot"> <img 
+src="https://img.shields.io/badge/Deploy%20To%20Heroku-red?style=flat&logo=heroku" width="210" height="34.45" /></a></p>
+
 
 ```
 This Bot is Created by KennedyProject, If your kanging this without fork at least give a credit to get a smile of my hard work. 
 - EmikoRobot
-- YoneRobot
 - SaitamaRobot 
-- TheRealPhoenixBot
-- DaisyX 
 - WilliamButcherBot
 ```
 
 ### Support
 <p>
-<a href="https://t.me/excrybaby"> <img src="https://img.shields.io/badge/Sena-Ex-blue?&logo=telegram" alt="Sena on Telegram" /> </a><br>
+<a href="https://t.me/usernot4found"> <img src="https://img.shields.io/badge/Sena-Ex-blue?&logo=telegram" alt="Sena on Telegram" /> </a><br>
 <a href="https://t.me/EmikoSupport"> <img src="https://img.shields.io/badge/Support-Chat-blue?&logo=telegram" alt="Support Chat" /> </a><br>
 <a href="https://t.me/KennedyProject"> <img src="https://img.shields.io/badge/Update-Channel-blue?&logo=telegram" alt="Update Channel" /> </a><br>
 </p>
 
 ## Credit 
 
-• [Sena](https://github.com/kennedy-ex)
-
-• [Arya](https://github.com/aryazakaria01)
-
-• [Kyy](https://github.com/zxcskyy)
+```
+It's useless to give credit because YOU won't care.
+```
